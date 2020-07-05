@@ -13,7 +13,7 @@ for danmaku_file in file_list:
         timestamp = int(file_name)
     except ValueError:
         continue
-    date = datetime.fromtimestamp(timestamp).strftime("%Y-%m-%dT%H-%M")
+    date = datetime.fromtimestamp(timestamp).strftime("%Y-%m-%dT%H-%M-%S")
     try:
         shutil.copy(
             os.path.join(danmaku_input_dir, danmaku_file),
